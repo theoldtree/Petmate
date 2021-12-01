@@ -4,21 +4,36 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 export default function Camera({ navigation }) {
     return (
         <View style={styles.container}>
-            <Text>
-                Camera
-            </Text>
-            <Button
-                title="사진촬영"
-                onPress={() => navigation.navigate("색상검출")}
-            />
+            <View style={styles.buttonContainer}>
+                <View style={styles.button}>
+                    <Button
+                        title="포도당측정"
+                        onPress={() => navigation.navigate("색상검출")}
+                    />
+                </View>
+                <View style={styles.button}>
+                    <Button
+                        title="pH측정"
+                        onPress={() => navigation.navigate("색상검출")}
+                    />
+                </View>
+            </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
+    button: {
+        margin: 30,
+    }
 })

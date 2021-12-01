@@ -16,7 +16,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name = "사진촬영" component={Camera}/>
+        <Stack.Screen name = "측정지표선택" component={Camera}/>
         <Stack.Screen name = "색상검출" component={ColorCheck}/>
         <Stack.Screen name = "분석하기" component={Result}/>
       </Stack.Navigator>
