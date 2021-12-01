@@ -8,8 +8,8 @@ export default function Result({ navigation }) {
                 Result
             </Text>
             <Button
-                title="사진촬영"
-                onPress={() => navigation.navigate('사진촬영')}
+                title="측정지표선택"
+                onPress={() => navigation.navigate('측정지표선택')}
             />
         </View>
     );
