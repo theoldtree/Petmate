@@ -1,39 +1,44 @@
-import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import React, { useRef } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { RNCamera } from 'react-native-camera';
 
 export default function Camera({ navigation }) {
+
     return (
         <View style={styles.container}>
-            <View style={styles.buttonContainer}>
-                <View style={styles.button}>
-                    <Button
-                        title="포도당측정"
-                        onPress={() => navigation.navigate("색상검출")}
-                    />
-                </View>
-                <View style={styles.button}>
-                    <Button
-                        title="pH측정"
-                        onPress={() => navigation.navigate("색상검출")}
-                    />
-                </View>
-            </View>
+            <Text style = {styles.font}>
+                Camera
+            </Text>
         </View>
     );
 }
 
+
+
 const styles = StyleSheet.create({
-    buttonContainer: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
+    font: {
+        fontSize: 15,
+        color: 'white'
     },
     container: {
         flex: 1,
+        flexDirection: 'column',
+        backgroundColor: 'black',
         justifyContent: 'center',
         alignItems: 'center',
     },
-    button: {
-        margin: 30,
-    }
-})
+    preview: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
+    capture: {
+        flex: 0,
+        backgroundColor: '#fff',
+        borderRadius: 5,
+        padding: 15,
+        paddingHorizontal: 20,
+        alignSelf: 'center',
+        margin: 20,
+    },
+});
