@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import { RNCamera } from 'react-native-camera';
 
 export default function Select({ navigation }) {
+    const [hasPermission, setHasPermission] = useState(null);
+    const [type, setType] = useState(RNCamera.Constants.Type.back);
+
+    const cameraRef = useRef();
+
     return (
         <View style={styles.container}>
             <View style={styles.buttonContainer}>
