@@ -11,6 +11,9 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+import com.petmate.BuildConfig;
+import com.petmate.R;
+
 // react-native-camera
 import org.reactnative.camera.RNCameraPackage;
 // react-native-image-colors
